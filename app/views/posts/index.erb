@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+<% image = post.fields[:headlineImage].fields %>
+      <article>
+        <h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
+        <h6><%= time_ago_in_words(Date.parse(post.date.to_s)).capitalize %></h6>
+        <a href="/post/<%= post.id %>"><img src="<%= image[:file].url %>" width="250" align="right" style="margin-left:5px;" /></a>
+        <div><%= post.summary %></div>
+        <p style="margin-top:5px;"><a href="/post/<%= post.id %>">Read More</a></p>
+      </article>
+      <hr/>
+<% end %>
