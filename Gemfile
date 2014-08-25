@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 # Distribute your app as a gem
 # gemspec
@@ -9,6 +10,8 @@ source 'https://rubygems.org'
 
 # Optional JSON codec (faster performance)
 # gem 'oj'
+gem 'unicorn'
+gem 'foreman'
 
 # Project requirements
 gem 'rake'
